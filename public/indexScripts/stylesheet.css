@@ -1,7 +1,9 @@
 body {
-    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(/lambdassitepics/indexbg.jpg);
-    background-size:cover;
-    overflow: hidden;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(/lambdassitepics/indexbg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .center1 {
@@ -11,16 +13,16 @@ body {
     text-align: center;
     color:rgba(255, 255, 255, 0.7);
     font-family: moon;
-    font-size: 15vh;
+    font-size: max(min(15vh,8.43vw), 80px);
     padding: 10px;
 }
 
 td i {
-    font-size: 5vh;
+    font-size: max(max(5vh,2.81vw), 40px);
 }
 
 .small1 {
-    font-size: 3vh;
+    font-size: max(min(3vh,1.68vw),30px);
 }
 
 .small1:hover {
@@ -29,7 +31,7 @@ td i {
     background: -webkit-linear-gradient(rgb(61, 192, 0), rgb(255, 255, 255));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 3.5vh;
+    font-size: min(3.5vh,1.97vw);
 }
 
 .small1:hover span {
@@ -56,7 +58,7 @@ table td{
 }
 
 img{
-    height: 4vh;
+    height: max(max(4vh,2.25vw), 40px);
 }
 
 i.fa-facebook:hover {
