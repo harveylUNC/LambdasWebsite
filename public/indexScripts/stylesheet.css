@@ -1,0 +1,74 @@
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(/lambdassitepics/indexbg.jpg);
+    background-size:cover;
+    overflow: hidden;
+}
+
+.center1 {
+    margin: 20vh auto ;
+
+    width: auto;
+    text-align: center;
+    color:rgba(255, 255, 255, 0.7);
+    font-family: moon;
+    font-size: 15vh;
+    padding: 10px;
+}
+
+td i {
+    font-size: 5vh;
+}
+
+.small1 {
+    font-size: 3vh;
+}
+
+.small1:hover {
+    cursor: pointer;
+    font-weight: bolder;
+    background: -webkit-linear-gradient(rgb(61, 192, 0), rgb(255, 255, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3.5vh;
+}
+
+.small1:hover span {
+    display:none;
+}
+
+.small1:hover:before {
+    content:"Enter";
+}
+
+@font-face{
+    font-family:moon;
+    src:url(/fonts/Moon2.0-Regular.otf);
+}
+
+table {
+    margin-top: 1.5vh;
+}
+
+table td{
+    
+    color: white;
+    padding: 2vh;
+}
+
+img{
+    height: 4vh;
+}
+
+i.fa-facebook:hover {
+    background: -webkit-linear-gradient(rgb(83, 164, 230), rgb(0, 65, 243));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+i.fa-instagram:hover {
+    background: -webkit-linear-gradient(-2.4turn, #9900ff, #ff0000, #ffd000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
