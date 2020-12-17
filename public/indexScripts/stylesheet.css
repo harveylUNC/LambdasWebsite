@@ -123,17 +123,6 @@ span img {
     .cb-slideshow ul div h3 { font-size: 80px }
 }
 
-.center1 {
-    margin: 20vh auto ;
-
-    width: auto;
-    text-align: center;
-    color:rgba(255, 255, 255, 0.7);
-    font-family: moon;
-    font-size: max(min(15vh,8.43vw), 80px);
-    padding: 10px;
-}
-
 td i {
     font-size: max(max(5vh,2.81vw), 40px);
 }
@@ -142,22 +131,7 @@ td i {
     font-size: max(min(3vh,1.68vw),30px);
 }
 
-.small1:hover {
-    cursor: pointer;
-    font-weight: bolder;
-    background: -webkit-linear-gradient(rgb(61, 192, 0), rgb(255, 255, 255));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: min(3.5vh,1.97vw);
-}
 
-.small1:hover span {
-    display:none;
-}
-
-.small1:hover:before {
-    content:"Enter";
-}
 
 @font-face{
     font-family:moon;
@@ -190,4 +164,14 @@ i.fa-instagram:hover {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: pointer;
+}
+
+.opa {
+    -webkit-filter: opacity(5%);
+}
+
+.opa:hover{
+    -webkit-filter: opacity(100%);
+    cursor:pointer;
+    -webkit-user-drag: none;
 }
