@@ -125,6 +125,11 @@ span img {
 
 td i {
     font-size: max(max(5vh,2.81vw), 40px);
+    -webkit-filter: opacity(30%);
+}
+
+td i:hover{
+    -webkit-filter: opacity(100%);
 }
 
 .small1 {
