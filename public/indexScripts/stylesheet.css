@@ -1,9 +1,126 @@
 body {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(/lambdassitepics/indexbg.jpg) no-repeat center center fixed; 
+    background: linear-gradient(rgb(0,0,0), rgb(0,0,0)) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+table {
+    z-index: 1001;
+}
+
+span img {
+    width: 30vw;
+    height: auto;
+}
+
+.cb-slideshow,
+.cb-slideshow:after {
+    position: fixed; 
+    width: 100%;
+    height:30%;
+    top: 50%;
+    left:0px;
+    z-index:0;
+}
+
+.cb-slideshow ul span {
+    position: absolute;
+    top: -75%;
+    left: auto;
+    color: transparent;
+    bottom: 0;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 36s linear infinite 0s; 
+}
+
+.cb-slideshow ul div { 
+    z-index: -1;
+    position: absolute;
+    top: 70%;
+    bottom: 30px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    color: #fff;
+    animation: titleAnimation 36s linear infinite 0s; 
+}
+.cb-slideshow ul div h3 { 
+    font-family: arial, sans-serif;
+    font-size: 170px;
+    padding: 0;
+    line-height: 200px; 
+}
+
+.cb-slideshow ul:nth-child(1) span { 
+    background-image: url(/public/lambdassitepics/indexbg.jpg) 
+}
+.cb-slideshow ul:nth-child(2) span { 
+    background-image: url(/public/lambdassitepics/Brotherhood.jpg);
+    animation-delay: 6s; 
+}
+.cb-slideshow ul:nth-child(3) span { 
+    background-image: url(/public/lambdassitepics/Leadership.png);
+    animation-delay: 12s; 
+}
+.cb-slideshow ul:nth-child(4) span { 
+    background-image: url(/public/lambdassitepics/philanthropy.png);
+    animation-delay: 18s; 
+}
+.cb-slideshow ul:nth-child(5) span { 
+    background-image: url(/public/lambdassitepics/community.jpg);
+    animation-delay: 24s; 
+}
+.cb-slideshow ul:nth-child(6) span { 
+    background-image: url(/public/lambdassitepics/cultural.png);
+    animation-delay: 30s; 
+}
+
+.cb-slideshow ul:nth-child(2) div { 
+    animation-delay: 6s; 
+}
+.cb-slideshow ul:nth-child(3) div { 
+    animation-delay: 12s; 
+}
+.cb-slideshow ul:nth-child(4) div { 
+    animation-delay: 18s; 
+}
+.cb-slideshow ul:nth-child(5) div { 
+    animation-delay: 24s; 
+}
+.cb-slideshow ul:nth-child(6) div { 
+    animation-delay: 30s; 
+}
+
+@keyframes imageAnimation { 
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@keyframes titleAnimation { 
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+.no-cssanimations .cb-slideshow li span{
+	opacity: 1;
+}
+
+@media screen and (max-width: 1140px) { 
+    .cb-slideshow ul div h3 { font-size: 140px }
+}
+@media screen and (max-width: 600px) { 
+    .cb-slideshow ul div h3 { font-size: 80px }
 }
 
 .center1 {
