@@ -32,9 +32,14 @@ span img {
     color: transparent;
     bottom: 0;
     background-repeat: none;
-    opacity: 0;
+    -webkit-filter: opacity(10%);
     z-index: 0;
     animation: imageAnimation 36s linear infinite 0s; 
+}
+
+.cb-slideshow ul span:hover{
+    cursor: pointer;
+    -webkit-filter: opacity(100%);
 }
 
 .cb-slideshow ul div { 
@@ -61,23 +66,18 @@ span img {
 }
 .cb-slideshow ul:nth-child(2) span { 
     background-image: url(/public/lambdassitepics/Picture1.png); 
-    animation-delay: 6s; 
 }
 .cb-slideshow ul:nth-child(3) span { 
     background-image: url(/public/lambdassitepics/Picture1.png); 
-    animation-delay: 12s; 
 }
 .cb-slideshow ul:nth-child(4) span { 
     background-image: url(/public/lambdassitepics/Picture1.png); 
-    animation-delay: 18s; 
 }
 .cb-slideshow ul:nth-child(5) span { 
     background-image: url(/public/lambdassitepics/Picture1.png); 
-    animation-delay: 24s; 
 }
 .cb-slideshow ul:nth-child(6) span { 
     background-image: url(/public/lambdassitepics/Picture1.png); 
-    animation-delay: 30s; 
 }
 
 .cb-slideshow ul:nth-child(2) div { 
@@ -97,8 +97,8 @@ span img {
 }
 
 @keyframes imageAnimation { 
-    0% { opacity: 1; animation-timing-function: ease-in; }
-    8% { opacity: 1; animation-timing-function: ease-out; }
+    0% { opacity: 1; }
+    8% { opacity: 1 }
     17% { opacity: 1 }
     25% { opacity: 1 }
     100% { opacity: 1 }
@@ -171,12 +171,9 @@ i.fa-instagram:hover {
     cursor: pointer;
 }
 
-.opa {
-    -webkit-filter: opacity(5%);
-}
-
-.opa:hover{
-    -webkit-filter: opacity(100%) !important;
-    cursor:pointer;
-    display:block;
+#footer{
+    position:fixed;
+    right:0;
+    bottom:0;
+    color: rgba(255,255,255, 0.5);
 }
