@@ -35,11 +35,13 @@ span img {
     -webkit-filter: opacity(10%);
     z-index: 0;
     animation: imageAnimation 36s linear infinite 0s; 
+    -webkit-user-drag: none;
 }
 
 .cb-slideshow ul span:hover{
     cursor: pointer;
     -webkit-filter: opacity(100%);
+    -webkit-user-drag: none;
 }
 
 .cb-slideshow ul div { 
@@ -177,3 +179,13 @@ i.fa-instagram:hover {
     bottom:0;
     color: rgba(255,255,255, 0.5);
 }
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
