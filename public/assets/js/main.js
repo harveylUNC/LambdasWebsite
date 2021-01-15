@@ -1,13 +1,6 @@
-/**
-* Template Name: Maxim - v2.3.0
-* Template URL: https://bootstrapmade.com/maxim-free-onepage-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 !(function($) {
   "use strict";
 
-  // Smooth scroll for the navigation menu and links with .scrollto classes
   var scrolltoOffset = $('#header').outerHeight() - 1;
   $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function(e) {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -145,7 +138,6 @@
     }
   });
 
-  // Porfolio isotope and filter
   $(window).on('load', function() {
     var chapRosterIsotope = $('.chapRoster-container').isotope({
       itemSelector: '.chapRoster-item',
@@ -162,7 +154,6 @@
       aos_init();
     });
 
-    // Initiate venobox (lightbox feature used in portofilo)
     $(document).ready(function() {
       $('.venobox').venobox();
     });
