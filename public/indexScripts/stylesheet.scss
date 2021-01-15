@@ -1,0 +1,270 @@
+body {
+    background: linear-gradient(rgb(0,0,0), rgb(0,0,0)) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+table {
+    z-index: 1001;
+}
+
+span img {
+    width: 20vw;
+    height: auto;
+}
+
+.cb-slideshow,
+.cb-slideshow:after {
+    position: fixed; 
+    width: 100%;
+    height:30%;
+    top: 50%;
+    left:0px;
+    z-index:0;
+}
+
+.cb-slideshow ul span {
+    position: absolute;
+    top: -75%;
+    left: 40vw;
+    color: transparent;
+    bottom: 0;
+    background-repeat: none;
+    -webkit-filter: opacity(10%);
+    z-index: 0;
+    animation: imageAnimation 36s linear infinite 0s; 
+    -webkit-user-drag: none;
+}
+
+.cb-slideshow ul span:hover{
+    cursor: pointer;
+    -webkit-filter: opacity(100%);
+    -webkit-user-drag: none;
+}
+
+.cb-slideshow ul div { 
+    z-index: -1;
+    position: absolute;
+    top: 70%;
+    bottom: 30px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    color: #fff;
+    animation: titleAnimation 36s linear infinite 0s; 
+}
+.cb-slideshow ul div h3 { 
+    font-family: arial, sans-serif;
+    font-size: 100px;
+    padding: 0;
+    line-height: 200px; 
+}
+
+.cb-slideshow ul:nth-child(1) span { 
+    background-image: url(/public/lambdassitepics/Picture1.png); 
+}
+.cb-slideshow ul:nth-child(2) span { 
+    background-image: url(/public/lambdassitepics/Picture1.png); 
+}
+.cb-slideshow ul:nth-child(3) span { 
+    background-image: url(/public/lambdassitepics/Picture1.png); 
+}
+.cb-slideshow ul:nth-child(4) span { 
+    background-image: url(/public/lambdassitepics/Picture1.png); 
+}
+.cb-slideshow ul:nth-child(5) span { 
+    background-image: url(/public/lambdassitepics/Picture1.png); 
+}
+.cb-slideshow ul:nth-child(6) span { 
+    background-image: url(/public/lambdassitepics/Picture1.png); 
+}
+
+.cb-slideshow ul:nth-child(2) div { 
+    animation-delay: 6s; 
+}
+.cb-slideshow ul:nth-child(3) div { 
+    animation-delay: 12s; 
+}
+.cb-slideshow ul:nth-child(4) div { 
+    animation-delay: 18s; 
+}
+.cb-slideshow ul:nth-child(5) div { 
+    animation-delay: 24s; 
+}
+.cb-slideshow ul:nth-child(6) div { 
+    animation-delay: 30s; 
+}
+
+@keyframes imageAnimation { 
+    0% { opacity: 1; }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    25% { opacity: 1 }
+    100% { opacity: 1 }
+}
+
+@keyframes titleAnimation { 
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+.no-cssanimations .cb-slideshow li span{
+	opacity: 1;
+}
+
+@media screen and (max-width: 1140px) { 
+    .cb-slideshow ul div h3 { font-size: 140px }
+}
+@media screen and (max-width: 600px) { 
+    .cb-slideshow ul div h3 { font-size: 80px }
+}
+
+td i {
+    font-size: max(max(5vh,2.81vw), 40px);
+    -webkit-filter: opacity(30%);
+}
+
+td i:hover{
+    -webkit-filter: opacity(100%);
+}
+
+.small1 {
+    font-size: max(min(3vh,1.68vw),30px);
+}
+
+
+
+@font-face{
+    font-family:moon;
+    src:url(/fonts/Moon2.0-Regular.otf);
+}
+
+table {
+    margin-top: 1.5vh;
+}
+
+table td{
+    
+    color: white;
+    padding: 2vh;
+}
+
+img{
+    height: max(max(4vh,2.25vw), 40px);
+}
+
+i.fa-facebook:hover {
+    background: -webkit-linear-gradient(rgb(83, 164, 230), rgb(0, 65, 243));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+i.fa-instagram:hover {
+    background: -webkit-linear-gradient(-2.4turn, #9900ff, #ff0000, #ffd000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+#footer{
+    position:fixed;
+    right:0;
+    bottom:0;
+    color: rgba(255,255,255, 0.5);
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+
+  @mixin glitchCopy { 
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.glitch {
+position: relative;
+color: white;
+font-size: 4em;
+letter-spacing: .5em;
+/* Animation provies a slight random skew. Check bottom of doc
+for more information on how to random skew. */
+animation: glitch-skew 1s infinite linear alternate-reverse;
+
+// Creates a copy before our text. 
+&::before{
+    // Duplicates our text with the mixin.
+    @include glitchCopy;
+    // Scoots text slightly to the left for the color offset.
+    left: 2px;
+    // Creates the color 'shadow' that happens on the glitch.
+    text-shadow: -2px 0 #ff00c1;
+    /* Creates an initial clip for our glitch. This works in
+    a typical top,right,bottom,left fashion and creates a mask
+    to only show a certain part of the glitch at a time. */
+    clip: rect(44px, 450px, 56px, 0);
+    /* Runs our glitch-anim defined below to run in a 5s loop, infinitely,
+    with an alternating animation to keep things fresh. */
+    animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+// Creates a copy after our text. Note comments from ::before.
+&::after {
+    @include glitchCopy;
+    left: -2px;
+    text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+    animation: glitch-anim2 1s infinite linear alternate-reverse;
+}
+}
+
+/* Creates an animation with 20 steaps. For each step, it calculates 
+a percentage for the specific step. It then generates a random clip
+box to be used for the random glitch effect. Also adds a very subtle
+skew to change the 'thickness' of the glitch.*/
+@keyframes glitch-anim {
+$steps: 20;
+@for $i from 0 through $steps {
+#{percentage($i*(1/$steps))} {
+  clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+        transform: skew((random(100) / 100) + deg);
+}
+}
+}
+
+// Same deal, just duplicated for ultra randomness.
+@keyframes glitch-anim2 {
+$steps: 20;
+@for $i from 0 through $steps {
+#{percentage($i*(1/$steps))} {
+  clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+        transform: skew((random(100) / 100) + deg);
+}
+}
+}
+
+// Does the same deal as before, but now only skews. Used for main text.
+@keyframes glitch-skew {
+$steps: 10;
+@for $i from 0 through $steps {
+#{percentage($i*(1/$steps))} {
+  transform: skew((random(10) - 5) + deg);
+}
+}
+}
