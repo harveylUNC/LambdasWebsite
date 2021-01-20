@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  height: 72px;
+  height: 8vh;
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
@@ -336,7 +336,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: calc(100vh - 72px);
+  height: 92vh;
   background: url("/lambdassitepics/indexbg.jpg") center center;
   background-size: cover;
   position: relative;
@@ -359,7 +359,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero h1 {
-  margin: 0 0 10px 0;
+  margin: 0 0 0 0;
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
@@ -368,7 +368,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero h2 {
   color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 35px;
+  margin-bottom: 0;
   font-size: 24px;
 }
 
@@ -545,10 +545,61 @@ section {
 /*--------------------------------------------------------------
 # activeClass
 --------------------------------------------------------------*/
+
 .member {
-  height: 9.5vw;
-  width: 9.5vw;
+  height: 14vw;
+  width: 14vw;
   overflow:hidden;
+  background-color:white;
+}
+
+@media (min-width:300px) and (max-width:760px){
+  .member-info-content{
+    font-size: 30px;
+  }
+
+  .member {
+    height: 30vw;
+    width: 30vw;
+    overflow:hidden;
+    background-color:white;
+  }
+}
+
+@media (min-width:761px) and (max-width:1023px){
+  .member {
+    height: 22vw;
+    width: 22vw;
+    overflow:hidden;
+    background-color:white;
+  }
+}
+
+@media (min-width:1024px) and (max-width:1439px){
+  .member {
+    height: 16vw;
+    width: 18vw;
+    overflow:hidden;
+    background-color:white;
+  }
+}
+
+@media (min-width:1440px) and (max-width:2559px){
+  .member {
+    height: 12vw;
+    width: 13vw;
+    overflow:hidden;
+    background-color:white;
+  }
+}
+
+@media (min-width:2559px) and (max-width:3000px){
+  .member {
+    height: 9vw;
+    width: 9vw;
+    overflow:hidden;
+    background-color:white;
+  }
 }
 
 .member img {
@@ -581,6 +632,14 @@ section {
   font-size: 14px;
   color: #999;
   margin: 0 0 0 45px;
+}
+
+@media (min-width:481px) and (max-width:766px){
+  .activeClass .activeClass-item h4 {
+    font-size: px;
+    color: #999;
+    margin: 0 0 0 45px;
+  }
 }
 
 .activeClass .activeClass-item .quote-icon-left, .activeClass .activeClass-item .quote-icon-right {
