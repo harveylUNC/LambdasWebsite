@@ -1,9 +1,14 @@
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   background: linear-gradient(black, black) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  position: relative;
 }
 
 table {
@@ -148,14 +153,19 @@ span img {
 
 @media screen and (max-width: 1140px) {
   .cb-slideshow ul div h3 {
-    font-size: 140px;
+    font-size: 10vw;
   }
 }
 @media screen and (max-width: 600px) {
   .cb-slideshow ul div h3 {
-    font-size: 80px;
+    font-size: 10vw;
   }
 }
+
+
+
+
+
 td i {
   font-size: max(max(5vh, 2.81vw), 40px);
   -webkit-filter: opacity(30%);
