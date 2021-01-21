@@ -334,10 +334,20 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+video {
+  z-index: -99999;
+  min-height:85vh;
+  min-width:75vw;
+  position:absolute;
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
 #hero {
   width: 100%;
   height: 92vh;
-  background: url("/lambdassitepics/indexbg.jpg") center center;
+  background: url("/lambdassitepics/cyberpunk.mp4") center center;
   background-size: cover;
   position: relative;
   margin-top: 0px;
@@ -367,7 +377,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero h2 {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 1);
   margin-bottom: 0;
   font-size: 24px;
 }
