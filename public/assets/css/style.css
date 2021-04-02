@@ -573,6 +573,8 @@ section {
   }
 }
 
+.member-info-content{}
+
 @media (min-width:761px) and (max-width:1023px){
   .member {
     height: 22vw;
