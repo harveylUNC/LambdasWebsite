@@ -25,105 +25,105 @@
 
     <style>
         .youtube-player {
-          position: relative;
-          padding-bottom: 56.25%;
-          height: 0;
-          overflow: hidden;
-          max-width: 100%;
-          background: #000;
-          margin: 5px;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin: 5px;
         }
-      
+
         .youtube-player iframe {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          z-index: 100;
-          background: transparent;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            background: transparent;
         }
-      
+
         .youtube-player img {
-          object-fit: cover;
-          display: block;
-          left: 0;
-          bottom: 0;
-          margin: auto;
-          max-width: 100%;
-          width: 100%;
-          position: absolute;
-          right: 0;
-          top: 0;
-          border: none;
-          height: auto;
-          cursor: pointer;
-          -webkit-transition: 0.4s all;
-          -moz-transition: 0.4s all;
-          transition: 0.4s all;
+            object-fit: cover;
+            display: block;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            max-width: 100%;
+            width: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            border: none;
+            height: auto;
+            cursor: pointer;
+            -webkit-transition: 0.4s all;
+            -moz-transition: 0.4s all;
+            transition: 0.4s all;
         }
-      
+
         .youtube-player img:hover {
-          -webkit-filter: brightness(75%);
+            -webkit-filter: brightness(75%);
         }
-      
+
         .youtube-player .play {
-          height: 72px;
-          width: 72px;
-          left: 50%;
-          top: 50%;
-          margin-left: -36px;
-          margin-top: -36px;
-          position: absolute;
-          background: url('//i.imgur.com/TxzC70f.png') no-repeat;
-          cursor: pointer;
+            height: 72px;
+            width: 72px;
+            left: 50%;
+            top: 50%;
+            margin-left: -36px;
+            margin-top: -36px;
+            position: absolute;
+            background: url('//i.imgur.com/TxzC70f.png') no-repeat;
+            cursor: pointer;
         }
-      </style>
-      <script>
+    </style>
+    <script>
         /*
          * Light YouTube Embeds by @labnol
          * Credit: https://www.labnol.org/
          */
-      
+
         function labnolIframe(div) {
-          var iframe = document.createElement('iframe');
-          iframe.setAttribute(
-            'src',
-            'https://www.youtube.com/embed/' + div.dataset.id + '?autoplay=1&rel=0'
-          );
-          iframe.setAttribute('frameborder', '0');
-          iframe.setAttribute('allowfullscreen', '1');
-          iframe.setAttribute(
-            'allow',
-            'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-          );
-          div.parentNode.replaceChild(iframe, div);
-        }
-      
-        function initYouTubeVideos() {
-          var playerElements = document.getElementsByClassName('youtube-player');
-          for (var n = 0; n < playerElements.length; n++) {
-            var videoId = playerElements[n].dataset.id;
-            var div = document.createElement('div');
-            div.setAttribute('data-id', videoId);
-            var thumbNode = document.createElement('img');
-            thumbNode.src = '//i.ytimg.com/vi/ID/hqdefault.jpg'.replace(
-              'ID',
-              videoId
+            var iframe = document.createElement('iframe');
+            iframe.setAttribute(
+                'src',
+                'https://www.youtube.com/embed/' + div.dataset.id + '?autoplay=1&rel=0'
             );
-            div.appendChild(thumbNode);
-            var playButton = document.createElement('div');
-            playButton.setAttribute('class', 'play');
-            div.appendChild(playButton);
-            div.onclick = function () {
-              labnolIframe(this);
-            };
-            playerElements[n].appendChild(div);
-          }
+            iframe.setAttribute('frameborder', '0');
+            iframe.setAttribute('allowfullscreen', '1');
+            iframe.setAttribute(
+                'allow',
+                'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+            );
+            div.parentNode.replaceChild(iframe, div);
         }
-      
+
+        function initYouTubeVideos() {
+            var playerElements = document.getElementsByClassName('youtube-player');
+            for (var n = 0; n < playerElements.length; n++) {
+                var videoId = playerElements[n].dataset.id;
+                var div = document.createElement('div');
+                div.setAttribute('data-id', videoId);
+                var thumbNode = document.createElement('img');
+                thumbNode.src = '//i.ytimg.com/vi/ID/hqdefault.jpg'.replace(
+                    'ID',
+                    videoId
+                );
+                div.appendChild(thumbNode);
+                var playButton = document.createElement('div');
+                playButton.setAttribute('class', 'play');
+                div.appendChild(playButton);
+                div.onclick = function () {
+                    labnolIframe(this);
+                };
+                playerElements[n].appendChild(div);
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', initYouTubeVideos);
-      </script>
+    </script>
 </head>
 
 <body>
@@ -150,7 +150,8 @@
     </header><!-- End Header -->
 
     <!-- ======= Hero Section ======= -->
-    <section id="hero" style="background-color: black" class="d-flex flex-column justify-content-center align-items-center">
+    <section id="hero" style="background-color: black"
+        class="d-flex flex-column justify-content-center align-items-center">
         <div style="background-color: black" class="container text-center text-md-left" data-aos="fade-up">
             <div style="z-index:100000; background:black; position:absolute; top: 15vh; left:auto; padding: 1%">
                 <h1>Lambda Phi Epsilon</h1>
@@ -165,7 +166,8 @@
 
         <!-- ======= rush Section ======= -->
         <section id="rush" class="rush">
-            <div class="youtube-player" data-id="gjXWDSASopQ" style="width:100%; height:100vh; border:none; z-index:999999;"></div>
+            <div class="youtube-player" data-id="gjXWDSASopQ"
+                style="width:100%; height:100vh; border:none; z-index:999999;"></div>
         </section>
         <!-- End rush Section -->
 
@@ -188,8 +190,10 @@
                                     <span>President</span>
                                 </div>
                                 <div class="social">
-                                    <a href="https://www.facebook.com/dangmichaeldeng" target="_blank"><i class="icofont-facebook"></i></a>
-                                    <a href="https://www.instagram.com/dangmichaeldeng" target="_blank"><i class="icofont-instagram"></i></a>
+                                    <a href="https://www.facebook.com/dangmichaeldeng" target="_blank"><i
+                                            class="icofont-facebook"></i></a>
+                                    <a href="https://www.instagram.com/dangmichaeldeng" target="_blank"><i
+                                            class="icofont-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -204,8 +208,10 @@
                                     <span>VPE</span>
                                 </div>
                                 <div class="social">
-                                    <a href="https://www.facebook.com/gerald.tadeja.56" target="_blank"><i class="icofont-facebook"></i></a>
-                                    <a href="https://www.instagram.com/geraldt126" target="_blank"><i class="icofont-instagram"></i></a>
+                                    <a href="https://www.facebook.com/gerald.tadeja.56" target="_blank"><i
+                                            class="icofont-facebook"></i></a>
+                                    <a href="https://www.instagram.com/geraldt126" target="_blank"><i
+                                            class="icofont-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -220,8 +226,10 @@
                                     <span>VPI</span>
                                 </div>
                                 <div class="social">
-                                    <a href="https://www.facebook.com/tanonguyen05" target="_blank"><i class="icofont-facebook"></i></a>
-                                    <a href="https://www.instagram.com/tano_nguyen_05" target="_blank"><i class="icofont-instagram"></i></a>
+                                    <a href="https://www.facebook.com/tanonguyen05" target="_blank"><i
+                                            class="icofont-facebook"></i></a>
+                                    <a href="https://www.instagram.com/tano_nguyen_05" target="_blank"><i
+                                            class="icofont-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -236,8 +244,10 @@
                                     <span>Judicial/Service</span>
                                 </div>
                                 <div class="social">
-                                    <a href="https://www.facebook.com/jonathan.liao.714" target="_blank"><i class="icofont-facebook"></i></a>
-                                    <a href="https://www.instagram.com/jon.liao" target="_blank"><i class="icofont-instagram"></i></a>
+                                    <a href="https://www.facebook.com/jonathan.liao.714" target="_blank"><i
+                                            class="icofont-facebook"></i></a>
+                                    <a href="https://www.instagram.com/jon.liao" target="_blank"><i
+                                            class="icofont-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -252,8 +262,10 @@
                                     <span>Treasurer/Academic</span>
                                 </div>
                                 <div class="social">
-                                    <a href="https://www.facebook.com/danielku776" target="_blank"><i class="icofont-facebook"></i></a>
-                                    <a href="https://www.instagram.com/daniel.ku7" target="_blank"><i class="icofont-instagram"></i></a>
+                                    <a href="https://www.facebook.com/danielku776" target="_blank"><i
+                                            class="icofont-facebook"></i></a>
+                                    <a href="https://www.instagram.com/daniel.ku7" target="_blank"><i
+                                            class="icofont-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -268,8 +280,10 @@
                                     <span>Rush</span>
                                 </div>
                                 <div class="social">
-                                    <a href="https://www.facebook.com/jonny.wu.902" target="_blank"><i class="icofont-facebook"></i></a>
-                                    <a href="https://www.instagram.com/jonny_w00" target="_blank"><i class="icofont-instagram"></i></a>
+                                    <a href="https://www.facebook.com/jonny.wu.902" target="_blank"><i
+                                            class="icofont-facebook"></i></a>
+                                    <a href="https://www.instagram.com/jonny_w00" target="_blank"><i
+                                            class="icofont-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -284,8 +298,10 @@
                                     <span>Rush/Cultural/Publicity</span>
                                 </div>
                                 <div class="social">
-                                    <a href="https://www.facebook.com/profile.php?id=100006355572925" target="_blank"><i class="icofont-facebook"></i></a>
-                                    <a href="https://www.instagram.com/andretautjo" target="_blank"><i class="icofont-instagram"></i></a>
+                                    <a href="https://www.facebook.com/profile.php?id=100006355572925" target="_blank"><i
+                                            class="icofont-facebook"></i></a>
+                                    <a href="https://www.instagram.com/andretautjo" target="_blank"><i
+                                            class="icofont-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -300,8 +316,10 @@
                                     <span>Media</span>
                                 </div>
                                 <div class="social">
-                                    <a href="https://www.facebook.com/sunghwu.song" target="_blank"><i class="icofont-facebook"></i></a>
-                                    <a href="https://www.instagram.com/sunghwu.song" target="_blank"><i class="icofont-instagram"></i></a>
+                                    <a href="https://www.facebook.com/sunghwu.song" target="_blank"><i
+                                            class="icofont-facebook"></i></a>
+                                    <a href="https://www.instagram.com/sunghwu.song" target="_blank"><i
+                                            class="icofont-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -316,8 +334,10 @@
                                     <span>Fundraising/Alumni</span>
                                 </div>
                                 <div class="social">
-                                    <a href="https://www.facebook.com/maximilian.kremer.33" target="_blank"><i class="icofont-facebook"></i></a>
-                                    <a href="https://www.instagram.com/maximileannndollars" target="_blank"><i class="icofont-instagram"></i></a>
+                                    <a href="https://www.facebook.com/maximilian.kremer.33" target="_blank"><i
+                                            class="icofont-facebook"></i></a>
+                                    <a href="https://www.instagram.com/maximileannndollars" target="_blank"><i
+                                            class="icofont-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -332,8 +352,10 @@
                                     <span>Cultural/Risk Management</span>
                                 </div>
                                 <div class="social">
-                                    <a href="https://www.facebook.com/joseph.tuong" target="_blank"><i class="icofont-facebook"></i></a>
-                                    <a href="https://www.instagram.com/hosayee_tee" target="_blank"><i class="icofont-instagram"></i></a>
+                                    <a href="https://www.facebook.com/joseph.tuong" target="_blank"><i
+                                            class="icofont-facebook"></i></a>
+                                    <a href="https://www.instagram.com/hosayee_tee" target="_blank"><i
+                                            class="icofont-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -348,8 +370,10 @@
                                     <span>Social</span>
                                 </div>
                                 <div class="social">
-                                    <a href="https://www.facebook.com/kevinpham99" target="_blank"><i class="icofont-facebook"></i></a>
-                                    <a href="https://www.instagram.com/phamkev" target="_blank"><i class="icofont-instagram"></i></a>
+                                    <a href="https://www.facebook.com/kevinpham99" target="_blank"><i
+                                            class="icofont-facebook"></i></a>
+                                    <a href="https://www.instagram.com/phamkev" target="_blank"><i
+                                            class="icofont-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -364,8 +388,10 @@
                                     <span>Webmaster/Baddie</span>
                                 </div>
                                 <div class="social">
-                                    <a href="https://www.facebook.com/hliu16" target="_blank"><i class="icofont-facebook"></i></a>
-                                    <a href="https://www.instagram.com/hliu97" target="_blank"><i class="icofont-instagram"></i></a>
+                                    <a href="https://www.facebook.com/hliu16" target="_blank"><i
+                                            class="icofont-facebook"></i></a>
+                                    <a href="https://www.instagram.com/hliu97" target="_blank"><i
+                                            class="icofont-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -380,8 +406,10 @@
                                     <span>Historian</span>
                                 </div>
                                 <div class="social">
-                                    <a href="https://www.facebook.com/taejung.kim.777158" target="_blank"><i class="icofont-facebook"></i></a>
-                                    <a href="https://www.instagram.com/tjxkim" target="_blank"><i class="icofont-instagram"></i></a>
+                                    <a href="https://www.facebook.com/taejung.kim.777158" target="_blank"><i
+                                            class="icofont-facebook"></i></a>
+                                    <a href="https://www.instagram.com/tjxkim" target="_blank"><i
+                                            class="icofont-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -396,8 +424,10 @@
                                     <span>Risk Management</span>
                                 </div>
                                 <div class="social">
-                                    <a href="https://www.facebook.com/branchen123" target="_blank"><i class="icofont-facebook"></i></a>
-                                    <a href="https://www.instagram.com/branxchen" target="_blank"><i class="icofont-instagram"></i></a>
+                                    <a href="https://www.facebook.com/branchen123" target="_blank"><i
+                                            class="icofont-facebook"></i></a>
+                                    <a href="https://www.instagram.com/branxchen" target="_blank"><i
+                                            class="icofont-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -431,6 +461,7 @@
                             <li data-filter=".filter-web" onclick=show("iotas")>Iota</li>
                             <li data-filter=".filter-web" onclick=show("kappas")>Kappa</li>
                             <li data-filter=".filter-web" onclick=show("mus")>Mu</li>
+                            <li data-filter=".filter-web" onclick=show("nus")>Nu</li>
                         </ul>
                     </div>
                 </div>
@@ -601,11 +632,29 @@
                         <div>
                             PLEDGE DAD: TAEJUNG “BRACK OPS” KIM<br><br>
 
-                            #74 Tano “Thrillher” Nguyen<br>
-                            #75 Michael “DIO9SUS” Deng<br>
-                            #76 Andre “Cerberüs” Tautjo<br>
-                            #77 Daniel “⚜️Charlemagne⚜️” Ku<br>
-                           
+                            #73 Tano “Thrillher” Nguyen<br>
+                            #74 Michael “DIO9SUS” Deng<br>
+                            #75 Andre “Cerberüs” Tautjo<br>
+                            #76 Daniel “⚜️Charlemagne⚜️” Ku<br>
+
+                        </div>
+                    </div>
+
+                    <div style="display:none; margin:0 auto" class="classes" id="nus">
+                        <img src="lambdassitepics/classes/nu.webp"></img>
+                        <div>
+                            PLEDGE MASTER: JEFFREY "「SORA」" ZHENG <br>
+                            PLEDGE DAD: BRYAN "SARGE" Nguyen<br><br>
+
+                            #77 Billy "DoOk CaBoOm" Zheng<br>
+                            #78 Andrew "Kurama" Pham <br>
+                            #79 Tony "Hikkup" Vo <br>
+                            #80 Andy "Brack Panther" Pyo <br>
+                            #81 Khoi "tHe KreAtor" Bui <br>
+                            #82 Andy "WolvHerine" Chen <br>
+                            #83 William "Freesol" Wun <br>
+                            #84 Xuan "SLEEP1NG DRAG0N" Chen <br>
+
                         </div>
                     </div>
 
@@ -620,65 +669,129 @@
         <!-- ======= resources Section ======= -->
         <section id="resources" class="resources">
             <div class="container">
-                <span class="SAStatement"> STANCE ON SEXUAL ASSAULT</span>
+                <span class="SAStatement"> UNC’s Asian Greek-lettered Organizations on Accountability for Sexual
+                    Misconduct </span>
 
-                <img style="margin-left: auto; margin-right: auto; display: block; width: 50vw" src="lambdassitepics/statementHeader.webp">
+                <img style="margin-left: auto; margin-right: auto; display: block; width: 50vw"
+                    src="lambdassitepics/statementHeader.webp">
                 <br>
-                As of August 26, 2020, the Lambda Phi Epsilon Associate Chapter at UNC Chapel Hill has been released
-                from its suspension by our International Board. We would like to thank all who spoke out and recognize
-                their tremendous bravery and efforts in promoting accountability within the community. The actions of
-                perpetrators in no way represent our fraternity’s vision or chapter values. As we continue to move
-                forward, the active house aims to enact sustainable changes so the voices of survivors are fully
-                understood and incorporated within future plans. To meet the expectations that we and the community hold
-                for ourselves, we have been working with various community groups to reform our fraternity. Going
-                forward, our organization has begun to do the following:<br><br>
+                The year of 2020 helped raise awareness of sexual misconduct in the Asian Greek community. It takes
+                great strength to come forward and share such traumatic experiences, and in doing so many survivors have
+                taken the first important steps to dismantle this system of violence. While no amount of words will make
+                up for the gratitude we owe to these individuals, we want to thank them for bringing this issue to
+                light. As members of this community, we hope to continue to work with and support the survivors in any
+                way possible. There is still much work to be done to end the perpetuation of sexual violence in this
+                community. <br><br>
 
-                1. Incorporate sexual assault prevention education within the new member education process as a means of
-                diminishing harmful behaviors that may propagate into the current fraternity culture as well as
-                promoting ways for future brothers to participate in collective efforts to better their community.<br><br>
+                Today, we want to take another step towards ending the perpetuation of sexual misconduct. We can do more
+                by coming together and creating healing spaces for survivors and a system of prevention for sexual
+                misconduct. As such, the current members that make up the <b>Asian Greek-lettered organizations (AGLOs)
+                    at
+                    UNC — alpha Kappa Delta Phi, Kappa Phi Lambda, and Lambda Phi Epsilon</b> — hereby formally declare
+                our
+                joint commitment to stand with survivors. We, as organizations, will hold our AGLO members accountable
+                and continue to be at the forefront of speaking out against sexual misconduct in all communities.
+                <br><br>
 
-                2. Mandate that all current members attend university and national board sponsored workshops on the
-                topics of sexual assault, toxic masculinity, and more so that change can begin in the current active
-                house going forward.<br><br>
+                The Asian Greek community at UNC is dedicated to maintaining this joint commitment and will be
+                evaluating it annually or as needed. We will continue to adhere to the mutual agreement in addition to
+                our organizational policies. We will also continue to take a strict approach to sexual misconduct in our
+                community and be devoted to the continued education of sexual misconduct prevention with our current and
+                future members. Lastly, we are committed to uplifting the voices of survivors, supporting them in any
+                way we can, and dismantling this system of violence that benefits perpetrators of sexual
+                misconduct.<br><br>
 
-                • Lambda Phi Epsilon has recently announced its partnership with RAINN, and it is in our goals to work
-                with the organization towards supporting healthy interactions between our members and members of our
-                community.<br><br>
+                The views expressed by the Associate Chapter of Lambda Phi Epsilon at the University of North Carolina
+                at Chapel Hill do not necessarily represent the views of the general membership or Lambda Phi Epsilon
+                International Fraternity, Inc., its officers, or its staff.<br><br>
 
-                • We have attended a workshop with the Office of Fraternity & Sorority Life this month with regard to
-                toxic masculinity and sexual assault and we plan to implement these lessons for future workshops.<br><br>
+                <b><u>Actions Taken</u></b>
+                <br><br>
 
-                3. Retroactively tending to our own history by delettering and disaffiliating with any past members who
-                have undermined the well-being of our community with their actions.<br><br>
+                <b>I. Mutual Agreement</b><br>
+                We condemn sexual harassment, sexual assault, gender-based violence, dating violence, domestic violence,
+                and stalking perpetrated in the UNC Asian Greek Community and UNC community. The AGLOs at UNC, alpha
+                Kappa Delta Phi, Kappa Phi Lambda, and Lambda Phi Epsilon are committed to creating inclusive and safe
+                environments for all members of our communities. Each organization has its own policy included in their
+                respective constitutions. If a report is made, we will pursue appropriate sanctions and investigations
+                via our governing bodies. <i>Terms are as defined in the following UNC policies: <a
+                        href="https://unc.policystat.com/policy/8455380/latest/#autoid-7paxj">Policy on Prohibited
+                        Discrimination, Harassment and Related Misconduct Including Sexual and Gender-Based Harassment,
+                        Sexual Violence, Interpersonal Violence and Stalking</a> and <a
+                        href="https://unc.policystat.com/policy/8487106/latest/">The Policy on Prohibited Sexual
+                        Harassment Under Title IX.</a></i><br><br>
 
-                It is our desire to maintain an open dialogue with the community, so we will continue to accept and
-                review any and all feedback or suggestions on how we can create the safest and most forward-looking
-                environment we can.<br><br>
+                <b>II. Required Internal Trainings</b>
+                All current members of the UNC AGLOs have completed or are in the process of completing the RAINN (Rape,
+                Abuse & Incest National Network) SA/SV training through a contract between the National APIDA
+                Panhellenic Association (NAPA) and RAINN; each AGLO also receives trainings from local resources.
+                Additionally, the individual organizations will be pursuing the following resources:
 
-                We are actively working with our International Board on these ongoing issues, so that we can educate
-                ourselves and promote a culture that aligns with the aforementioned action plans. Any further questions
-                or information regarding these incidents can be reported to Lambda Phi Epsilon Executive Director Zac
-                Antonius at zac.antonius@lambdaphiepsilon.org for investigation and review.<br><br>
+                <ul>
+                    <li><b>aKDPhi</b>: All current members have completed a Compass Center training focusing on how to
+                        recognize gender
+                        and relationship violence. Future members will be required to attend one training per semester
+                        focusing
+                        on SA/SV and related topics through local partnerships such as the Compass Center or Student
+                        Wellness. </li>
+                    <li><b>KPL</b>: Members will also be required to complete Compass Center’s domestic violence
+                        workshop
+                        and UNC’s
+                        Student Wellness workshop focusing on bystander intervention and violence prevention.</li>
+                    <li><b>LPhiE</b>: All current members have completed a Sexual Assault and Toxic Masculinities
+                        workshop
+                        hosted by
+                        UNC’s Student Wellness. All future members will be required to complete OneAct for Greeks
+                        Bystander
+                        Skills Workshop.</li>
+                </ul><br>
 
-                Here are a list of resources available to the UNC community and beyond if professional help is needed
-                for situations regarding sexual assault:<br><br>
+                <b>III. Resources</b>
+                In case of <b>filing a report</b> concerning a <b>member of a UNC AGLO</b>, please utilize the following
+                resources:
+                <ul>
+                    <li>The Title IX Office at the University of North Carolina at Chapel Hill:<br>
+                        <a href="https://eoc.unc.edu/our-policies/ppdhrm/">https://eoc.unc.edu/our-policies/ppdhrm/</a>
+                    </li>
+                    <li><b>aKDPhi</b>: The International Leadership Board of alpha Kappa Delta Phi has established the
+                        following email
+                        as a resource for potential reports. Please send a report to bod@akdphi.org.</li>
+                    <li><b>KPL</b>: The Chief Compliance Officer who serves on National Leadership of Kappa Phi Lambda
+                        will have the
+                        ability to pursue action against a member or chapter. Please send a report to
+                        cco@kplsorority.org when
+                        reporting to National Leadership.</li>
+                    <li> <b>LPhiE</b>: The Director of Fraternal Standards of Lambda Phi Epsilon’s International Board,
+                        Emily Feinstein,
+                        will conduct all investigations on behalf of the organization. Please send an email to
+                        report@lambdaphiepsilon.org to file a report to the International Board. All investigation and
+                        reporting
+                        of future cases will be handled by the Director of Fraternal Standards.</li>
+                </ul><br>
 
-                UNC’s resources for reporting sexual assault and seeking help:<br>
-                <a href="https://safe.unc.edu">https://safe.unc.edu</a><br><br>
-                Rape, Abuse, & Incest National Network:<br>
-                <a href="https://rainn.org">https://rainn.org/</a><br><br>
-                Directory of organizations with sexual violence resources:<br>
-                <a href="https://www.nsvrc.org/organizations">https://www.nsvrc.org/organizations</a><br><br>
-                NC Rape Crisis Center:<br>
-                <a href="http://nccasa.org/get-help/">http://nccasa.org/get-help/</a><br><br>
-                SAFE Alliance 24-Hour Hotline:<br>
-                980-771-4673<br><br>
-                Turning Point Sexual Assault Resource Center Hotline:<br>
-                704-281-7770
+                <b><u>Future Actions</u></b><br><br>
+                <ol>
+                    <li>We will co-host a community workshop during sexual assault awareness month in April for the
+                        purposes of education, raising awareness, and open discussion. This event will be an opportunity
+                        to continue the dialogue between members of the Asian community, allies, and the AGLO community
+                        on the importance of preventing sexual misconduct. At the end of the workshop, we will also be
+                        answering questions about the statements in this mutual agreement and future actions. [The
+                        educational portion of the workshop will be led by Shereka Dunston from Student Wellness.]
+                    </li>
+                </ol>
+                Please reach out to us if there are any ways we can better support our community at UNC.
+
+
+
+
+
+
+
+
 
             </div>
         </section><!-- End resources Section -->
-        
+
     </main><!-- End #main -->
 
     <footer id="footer">
